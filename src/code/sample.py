@@ -17,10 +17,17 @@ def auto_canny(image, sigma=0.33):
 	return edged
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--images", required=True,
+ap.add_argument("-i", "--images", required=False,
 	help="path to input dataset of images")
 args = vars(ap.parse_args())
- 
+
+
+# To set the default path of the directory containing the input images
+if (args["images"]==None):
+	args["images"]="../resources/input/images/low_res_images"
+
+	
+	
 # loop over the images
 for imagePath in glob.glob(args["images"] + "/*.jpg"):
 	# load the image, convert it to grayscale, and blur it slightly
