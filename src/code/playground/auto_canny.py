@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  10 11:42:32 2018
+
+@author: vipul
+"""
 # import the necessary packages
 import numpy as np
 import argparse
@@ -24,7 +30,7 @@ args = vars(ap.parse_args())
 
 # To set the default path of the directory containing the input images
 if (args["images"]==None):
-	args["images"]="../resources/input/images/low_res_images"
+	args["images"]="../../resources/input/images/low_res_images"
 
 	
 	
